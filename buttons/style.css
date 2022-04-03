@@ -1,0 +1,924 @@
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a, button {
+    margin: 50px 0;
+    display: block;
+    text-decoration: none;
+    font-family: sans-serif;
+    position: relative;
+    padding: 40px 80px;
+    font-size: 45px;
+    overflow: hidden;
+}
+
+a:before, a:after, button:before, button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#rotating15 a {
+    color: #272727;
+    border: 5px solid #272727;
+}
+
+#rotating15 a:before {
+    background-color: #fff200;
+    z-index: -1;
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+    transition: transform 1s;
+}
+
+#rotating15 a:hover:before {
+    transform: rotate(0deg);
+}
+
+#swipe16 a {
+    color: #351435;
+    font-size: 40px;
+    border: 3px solid #351435;
+    transition: all 1s;
+}
+
+#swipe16 a:before {
+    background-color: #351435;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+#swipe16 a:hover:before {
+    transform: translateX(0);
+}
+
+#swipe16 a:hover {
+    color: #fff;
+}
+
+#cross17 a {
+    color: #262626;
+    letter-spacing: 2px;
+    border: 5px solid #262626;
+    transition: 1s;
+}
+
+#cross17 a:before {
+    background-color: #262626;
+    transition: 1s;
+    transform: rotateX(90deg);
+    z-index: -1;
+}
+
+#cross17 a:after {
+    background-color: #262626;
+    transition: 1s;
+    transform: rotateY(90deg);
+    z-index: -1;
+}
+
+#cross17 a:hover:before {
+    transform: rotateX(0);
+}
+
+#cross17 a:hover:after {
+    transform: rotateY(0);
+}
+
+#cross17 a:hover {
+    color: white;
+}
+
+#stretching18 a {
+    color: #E1332D;
+    letter-spacing: -2px;
+    border: 3px solid #E1332D;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all .5s;
+    box-sizing: border-box;
+}
+
+#stretching18 a:hover {
+    letter-spacing: 10px;
+    font-weight: 700;
+    border: 7px solid #E1332D;
+}
+
+#swipe19 a {
+    color: #222;
+    border: 3px solid #222;
+    transition: all 1s;
+}
+
+#swipe19 a:before {
+    content: 'YEAH!';
+    color: white;
+    background-color: #F44336;
+    transform: translateX(100%);
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#swipe19 a:hover:before {
+    transform: translateX(0);
+}
+
+#swipe19 a:hover {
+    color: #fff;
+}
+
+#glowing20 a {
+    color: #222;
+    border: 3px solid #222;
+    transition: all .3s;
+}
+
+#glowing20 a:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#glowing20 a:before {
+    background-color: #222;
+    height: 50px;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all .3s;
+}
+
+#glowing20 a:hover:before {
+    transform: translateX(100%) rotate(45deg);
+}
+
+#swapping21 a {
+    background-color: #262626;
+    border: 3px solid #262626;
+    transition: all .3s;
+    color: transparent;
+}
+
+#swapping21 a:before {
+    content: 'Hover Me';
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+#swapping21 a:after {
+    content: 'Hover Me';
+    background-color: #fffa65;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    transform: translate(-100%, 100%);
+}
+
+#swapping21 a:hover:before {
+    transform: translate(100%, -100%);
+}
+
+#swapping21 a:hover:after {
+    transform: translate(0, 0);
+}
+
+#scaling22 a {
+    color: #262626;
+    border: 3px solid #262626;
+    transition: all .5s;
+}
+
+#scaling22 a:before {
+    content: 'Hower Me';
+    background-color: #262626;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all .5s;
+}
+
+#scaling22 a:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#swapping23 button {
+    border: 2px solid tomato;
+    background: none;
+    color: tomato;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#swapping23 button:before {
+    height: 0%;
+    background: tomato;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    transition: all .5s;
+}
+
+#swapping23 button:hover:before {
+    height: 190%;
+}
+
+#swapping23 button:hover {
+    color: white;
+}
+
+#rotating24 button {
+    text-transform: uppercase;
+    background-color: #f1c40f;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    overflow: visible;
+}
+
+#rotating24 button:before {
+    content: "button";
+    background-color: #2ce771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all .5s;
+}
+
+#rotating24 button:hover:before {
+    transform: rotate(0deg);
+}
+
+#rotating24 button:after {
+    content: "button";
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: bottom;
+    transition: all .5s;
+    transition-delay: .4s;
+}
+
+#rotating24 button:hover:before, #rotating24 button:hover:after {
+    transform: rotate(0deg);
+}
+
+#swapping25 a {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 3px solid #ff0;
+    overflow: visible;
+    color: transparent;
+}
+
+#swapping25 a:before {
+    content: 'button';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    color: #ff0;
+    transition: all .5s;
+}
+
+#swapping25 a:after {
+    left: -100%;
+    content: 'button';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363636;
+    color: #ff0;
+    transition: all .5s;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+#swapping25 a:hover:before {
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+#swapping25 a:hover:after {
+    left: 0%;
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+}
+
+#treecircle26 a {
+    padding: 0;
+    width: 220px;
+    height: 80px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 80px;
+    background-color: transparent;
+    transition: all .5s;
+    font-size: 26px;
+    overflow: visible;
+}
+
+#treecircle26 a:before, #treecircle26 a:after {
+    top: 50%;
+    left: unset;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+    z-index: -1;
+    opacity: 0;
+}
+
+#treecircle26 a:before {
+    left: 0;
+    box-shadow: -100px 0 0 red;
+    opacity: 1;
+}
+
+#treecircle26 a:after {
+    right: 0;
+    box-shadow: 100px 0 0 red;
+    opacity: 1;
+}
+
+#treecircle26 a:hover:before {
+    left: 50%;
+    box-shadow: 30px 0 0 red;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#treecircle26 a:hover:after {
+    right: 50%;
+    box-shadow: -30px 0 0 red;
+    transform: translateX(50%) translateY(-50%);
+}
+
+#treecircle26 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 8px;
+    transform: scale(0);
+    transition: all .3s;
+    z-index: -1;
+}
+
+#treecircle26 a:hover span {
+    transform: scale(1);
+    transition-delay: .4s;
+}
+
+#treecircle26 a:hover {
+    color: white;
+    transition-delay: .4s;
+}
+
+#split27 a {
+    padding: 0;
+    width: 300px;
+    height: 60px;
+    background-color: transparent;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all .2s;
+    text-transform: uppercase;
+    overflow: visible;
+    font-size: 16px;
+    color: white;
+}
+
+#split27 a:hover {
+    color: #272727;
+}
+
+#split27 a:before {
+    background-color: #20caff;
+    z-index: -1;
+    top: -3px;
+    left: -3px;
+    mix-blend-mode: multiply;
+    transition: all .2s;
+    transform-origin: top;
+}
+
+#split27 a:after {
+    background-color: #ff7675;
+    z-index: -1;
+    top: 3px;
+    left: 3px;
+    mix-blend-mode: multiply;
+    transform-origin: bottom;
+    transition: all .2s;
+}
+
+#split27 a:hover:before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+#split27 a:hover:after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+#splitted28 a {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #f6b93b;
+    letter-spacing: 3px;
+    padding: 25px 50px;
+    border: 3px solid #f6b93b;
+    transition: all .5s;
+    background-color: transparent;
+}
+
+#splitted28 a:before,
+#splitted28 a:after,
+#splitted28 span:before,
+#splitted28 span:after {
+    content: "";
+    position: absolute;
+    width: 25.1%;
+    height: 100%;
+    background-color: #f6b93b;
+    z-index: -1;
+    transition: all 0.1s;
+}
+
+#splitted28 a:before {
+    top: 100%;
+    left: 0%;
+}
+
+#splitted28 a:hover:before {
+    top: 0;
+    left: 0;
+}
+
+#splitted28 a:after {
+    top: -100%;
+    left: 25%;
+    transition-delay: 0.1s
+}
+
+#splitted28 a:hover:after {
+    top: 0;
+    left: 25%;
+}
+
+#splitted28 a span:before {
+    top: 100%;
+    right: 25%;
+    transition-delay: 0.2s;
+}
+
+#splitted28 a:hover span:before {
+    top: 0;
+    right: 25%;
+}
+
+#splitted28 a span:after {
+    bottom: 100%;
+    right: 0%;
+    transition-delay: 0.3s
+}
+
+#splitted28 a:hover span:after {
+    bottom: 0;
+    right: 0;
+}
+
+#splitted28 a:hover {
+    color: white;
+}
+
+#swapping29 a {
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 0;
+    font-family: Verdana, serif;
+    letter-spacing: 3px;
+    height: 60px;
+    width: 200px;
+    line-height: 60px;
+    text-align: center;
+    color: #fdc518;
+/ / border: 2 px solid blue;
+    overflow: visible;
+}
+
+#swapping29 a:before {
+    height: 90px;
+    width: 200px;
+    top: -15px;
+    border-left: 2px solid red;
+    border-right: 2px solid #fdc518;
+    transition: all 1s;
+}
+
+#swapping29 a:after {
+    height: 60px;
+    width: 230px;
+    top: 0px;
+    left: -15px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid #fdc518;
+    transition: all 1s;
+}
+
+#swapping29 a:hover:before {
+    transform: rotateY(180deg);
+}
+
+#swapping29 a:hover:after {
+    transform: rotateX(180deg);
+}
+
+#bordergrowing30 button {
+    border: none;
+    padding: 12px 40px;
+    background-color: #c47135;
+    color: white;
+    font-family: sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: visible;
+}
+
+#bordergrowing30 button:before {
+    left: -5px;
+    top: -5px;
+    width: 24px;
+    height: 24px;
+    border-top: 2px solid #c47135;
+    border-left: 2px solid #c47135;
+    transition: all .5s;
+    position: absolute;
+}
+
+#bordergrowing30 button:after {
+    content: '';
+    right: -5px;
+    bottom: -5px;
+    left: unset;
+    top: unset;
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid #c47135;
+    border-bottom: 2px solid #c47135;
+    transition: all .5s;
+    position: absolute;
+}
+
+#bordergrowing30 button:hover:after,
+#bordergrowing30 button:hover:before {
+    height: 100%;
+    width: 100%;
+}
+
+#rotating28 a {
+    text-decoration: none;
+    width: 160px;
+    height: 60px;
+    color: black;
+    border: 2px solid black;
+    line-height: 60px;
+    text-align: center;
+    transition: all .2s;
+    font-size: 25px;
+    padding: 0;
+    overflow: visible;
+}
+
+#rotating28 a:hover {
+    color: white;
+}
+
+#rotating28 a:before {
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+    transition: all .8s;
+}
+
+#rotating28 a:hover:before {
+    opacity: 1;
+    transform: rotate(15deg);
+}
+
+#rotating28 a span {
+    color: transparent;
+    position: relative;
+}
+
+#rotating28 a span:before {
+    content: "B";
+    position: absolute;
+    color: black;
+    transition: all .2s;
+}
+
+#rotating28 a:hover span:before {
+    color: white;
+    font-size: 80px;
+    transform: rotate(360deg) translate(-60%, -10%);
+}
+
+#growing32 button {
+    background-color: transparent;
+    border: none;
+    width: 400px;
+    height: 120px;
+    text-transform: uppercase;
+    line-height: 120px;
+    text-align: center;
+    padding: 0;
+    font-size: 45px;
+    letter-spacing: 15px;
+    color: #262626;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#growing32 button:before{
+    height: 4px;
+    left: -100%;
+    transition: all .5s;
+    background-color: #262626;
+}
+#growing32 button:hover:before{
+    left: 0;
+}
+#growing32 button:after{
+    height: 4px;
+    top: unset;
+    bottom: 0;
+    left: 100%;
+    transition: all .5s;
+    background-color: #262626;
+}
+#growing32 button:hover:after{
+    left: 0;
+}
+
+#growing32 button span:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: -100%;
+    width: 4px;
+    right: 0;
+    transition: all .5s;
+    background-color: #262626;
+}
+#growing32 button:hover span:before{
+    top: 0;
+}
+#growing32 button span:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    bottom: -100%;
+    width: 4px;
+    left: 0;
+    transition: all .5s;
+    background-color: #262626;
+}
+#growing32 button:hover span:before{
+    top: 0;
+}
+#growing32 button:hover span:after{
+    bottom: 0;
+}
+#wave33 a{
+    text-decoration: none;
+    padding: 15px 30px;
+    color: #00aeff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    border: 2px solid #00aeff;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+#wave33 .wave{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: calc(100% + 22px);
+    background-color: #00aeff;
+    transition: all 1s;
+    z-index: -1;
+}
+#wave33 a:hover{
+    color: white;
+}
+#wave33 a:hover .wave{
+    top: 0;
+}
+#wave33 .wave:before{
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url("wave.png");
+    animation: wavy 0.5s linear infinite;
+}
+
+@keyframes wavy {
+    0%{background-position-x: 0}
+    100%{background-position-x: 118px}
+}
+#cuts34 a{
+    text-decoration: none;
+    width: 160px;
+    height: 60px;
+    color: black;
+    line-height: 60px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+    transition: all .2s;
+    padding: 0;
+}
+#cuts34 a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: -1;
+}
+#cuts34 a:hover{
+    color: white;
+}
+#cuts34 a span:before{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transition: all .2s;
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+#cuts34 a:hover span:before{
+    width: 100%;
+    background-color: black;
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+#skew35 a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 7px;
+    padding: 18px 30px;
+    font-size: 28px;
+    color: white;
+    overflow: visible;
+}
+#skew35 a:before{
+    width: 50%;
+    left: -1%;
+    top: -5px;
+    background-color: #ee5253;
+    transform: skewX(30deg);
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#skew35 a:hover:before{
+    transform: skewX(0deg);
+    left: 50%;
+    top: 0;
+}
+#skew35 a:after{
+    width: 50%;
+    left: 51%;
+    top: 5px;
+    background-color: #0a3d62;
+    transform: skewX(30deg);
+    z-index: -1;
+    transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#skew35 a:hover:after{
+    transform: skewX(0deg);
+    left: 0%;
+    top: 0;
+}
+#pulsing36 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 25px 50px;
+    background-color: #10ac84;
+    color: white;
+    border-radius: 100px;
+    font-size: 24px;
+    transition: all .2s;
+    overflow: visible;
+}
+
+#pulsing36 a:before{
+    background-color: #10ac84;
+    border-radius: 100px;
+    transition: all 0.4s;
+    z-index: -1;
+}
+#pulsing36 a:hover:before{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+#pulsing36 a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+#pulsing36 a:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+#swipe37 a{
+    text-decoration: none;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #250e74;
+    border: 4px solid #250e74;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all .5s;
+    padding: 0;
+}
+#swipe37 a:before{
+    bottom: 0;
+    right: 0;
+    width: unset;
+    height: unset;
+    border-top: 40px solid #250e74;
+    border-bottom: 40px solid #250e74;
+    border-right: 40px solid transparent;
+    transition: all 0.5s;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+#swipe37 a:after{
+    bottom: 0;
+    right: 0;
+    width: unset;
+    height: unset;
+    border-top: 40px solid #250e74;
+    border-bottom: 40px solid #250e74;
+    border-left: 40px solid transparent;
+    transition: all 0.5s;
+    z-index: -1;
+    transform: translateX(100%);
+}
+#swipe37 a:hover:before,
+#swipe37 a:hover:after{
+    transform: translateX(0);
+}
+#swipe37 a:hover{
+    color: white;
+}
